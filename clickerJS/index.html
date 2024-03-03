@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/CSS">
+</head>
+<body>
+    <script src="main.js"></script>
+    <div id="container">
+        <div id="logo">
+            <h1>FARM SIMULATOR - CLICKER</h1>
+        </div>
+        <div id="nav-left">
+            <div id="money-counter" style="margin-top: 20px; color: white;">MONEY: 5000$</div>
+        </div>
+        <div id="nav-right" style="float: left;">
+            <div id="farm_buttons">
+                <button class="button-3" id="farm_lvl">FARM LVL</button>
+                <button class="button-3">UPGRADE EQUIPMENT</button>
+                <button class="button-3">UPGRADE WORKERS</button>
+                <button class="button-3">SELL PRODUCTS</button>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+        <div id="main">
+            <div class="bars" style="float: left;" id="left-bar">
+                <img src="farm.png">
+                <div id="left-main">
+                    <table border="1px solid black">
+                        <tr>
+                            <td class="title-row">ANIMALS</td>
+                            <td class="title-row">PRODUCTS</td>
+                            <td class="title-row">EQUIPMENT (LVL 1)</td>
+                            <td class="title-row">FIELDS (LVL 1)</td>
+                            <td class="title-row">WORKERS (LVL 1)</td>
+                        </tr>
+                        <tr>
+                            <td class="animals-cell"><img class="animals-img" src="cow.jpg" alt="cow"><span class="animal-count">1</span></td>
+                            <td class="animals-cell" id="milk-counter">Milk: 0</td>
+                            <td>Tractor, Plow</td>
+                            <td>Wheat, Corn</td>
+                            <td>Farmhands, Veterinarians</td>
+                        </tr>
+                        <tr>
+                            <td class="animals-cell"><img class="animals-img" src="pig.jpg" alt="pig"><span class="animal-count">1</span></td>
+                            <td class="animals-cell" id="bacon-counter">Bacon: 0</td>
+                            <td>Feeding Trough, Waterer</td>
+                            <td>Pasture, Pigpen</td>
+                            <td>Swineherds</td>
+                        </tr>
+                        <tr>
+                            <td class="animals-cell"><img class="animals-img" src="chicken.jpg" alt="chicken"><span class="animal-count">2</span></td>
+                            <td class="animals-cell" id="egg-counter">Eggs: 0</td>
+                            <td>Incubator, Coop</td>
+                            <td>Cornfield, Chicken Run</td>
+                            <td>Poultry Farmers</td>
+                        </tr>
+                        <tr>
+                            <td class="animals-cell"><img class="animals-img" src="horse.jpg" alt="horse"><span class="animal-count">1</span></td>
+                            <td class="animals-cell" id="horsehair-counter">Horsehair: 0</td>
+                            <td>Saddle, Bridle</td>
+                            <td>Pasture, Stable</td>
+                            <td>Grooms, Farriers</td>
+                        </tr>
+                        <tr>
+                            <td class="animals-cell"><img class="animals-img" src="rabbit.png" alt="rabbit"><span class="animal-count">3</span></td>
+                            <td class="animals-cell" id="rabbit-meat-counter">Rabbit Meat: 0</td>
+                            <td>Feeder, Hutch</td>
+                            <td>Carrot Field, Rabbit Run</td>
+                            <td>Rabbit Keepers</td>
+                        </tr>
+                        <tr>
+                            <td class="animals-cell"><img class="animals-img" src="bull.jpg" alt="bull"><span class="animal-count">2</span></td>
+                            <td class="animals-cell" id="beef-counter">Beef: 0</td>
+                            <td>Cattle Prod, Water Trough</td>
+                            <td>Grassland, Bullpen</td>
+                            <td>Ranchers</td>
+                        </tr>
+                        <tr>
+                            <td class="animals-cell"><img class="animals-img" src="duck.png" alt="duck"><span class="animal-count">4</span></td>
+                            <td class="animals-cell" id="duck-eggs-counter">Duck Eggs: 0</td>
+                            <td>Pond, Duck House</td>
+                            <td>Rice Field, Duck Pond</td>
+                            <td>Duck Keepers</td>
+                        </tr>
+                        <tr>
+                            <td class="animals-cell"><img class="animals-img" src="goat.jpg" alt="goat"><span class="animal-count">3</span></td>
+                            <td class="animals-cell" id="goat-milk-counter">Milk: 0</td>
+                            <td>Milking Machine, Feed Trough</td>
+                            <td>Pasture, Goat Pen</td>
+                            <td>Goatherds</td>
+                        </tr>
+                        <tr>
+                            <td class="animals-cell"><img class="animals-img" src="sheep.jpg" alt="sheep"><span class="animal-count">2</span></td>
+                            <td class="animals-cell" id="wool-counter">Wool: 0</td>
+                            <td>Shears, Sheep Dip</td>
+                            <td>Grassland, Sheepfold</td>
+                            <td>Shepherds</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="bars" style="float: left;">
+                <img src="shop.png">
+                <div id="shop-info">
+                    <form id="buy-items-form">
+                        <fieldset>
+                            <legend>SHOP</legend>
+
+                            <div id="buy-animals">
+                                <fieldset>
+                                    <legend>ANIMALS</legend>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="COW">COW - 2500$</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="PIG">PIG - 1500$</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="CHICKEN">CHICKEN- 500$</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="HORSE">HORSE - 5000$</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="RABBIT">RABBIT - 1000$</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="DUCK">DUCK - 1200$</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="BULL">BULL - 3000$</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="GOAT">GOAT - 2000$</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="SHEEP">SHEEP - 1800$</label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                                <button class="button-3" style="margin-top: 10px;">BUY</button>
+                            </div>
+
+                            <div id="buy-equipment">
+                                <fieldset>
+                                    <legend>EQUIPMENT (LVL 1)</legend>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="TRACTOR">TRACTOR - 5000$</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="PLOW">PLOW - 2000$</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="FEEDING_TROUGH">FEEDING TROUGH - 1000$</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="INCUBATOR">INCUBATOR - 3000$</label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                                <button class="button-3" style="margin-top: 10px;">BUY</button>
+                            </div>
+                            <div id="buy-fields">
+                                <fieldset>
+                                    <legend>FIELDS (LVL 1)</legend>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="WHEAT_FIELD">WHEAT FIELD - 2000$</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="CORN_FIELD">CORN FIELD - 1500$</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="PASTURE">PASTURE - 3000$</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="CHICKEN_RUN">CHICKEN RUN - 1000$</label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                                <button class="button-3" style="margin-top: 10px;">BUY</button>
+                            </div>
+                            <div id="buy-workers">
+                                <fieldset>
+                                    <legend>WORKERS (LVL 1)</legend>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="FARMHAND">FARMHAND - 1000$</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="VETERINARIAN">VETERINARIAN - 2000$</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="SWINEHERD">SWINEHERD - 1500$</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="item" value="POULTRY_FARMER">POULTRY FARMER - 2500$</label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                                <button class="button-3" style="margin-top: 10px;">BUY</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+</body>
+</html>
